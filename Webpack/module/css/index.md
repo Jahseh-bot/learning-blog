@@ -4,19 +4,19 @@
   >> style-loader 负责把 CSS 插入到 DOM 中。
 
 ## 安装
-`npm install --save-dev style-loader css-loader`
+> `npm install --save-dev style-loader css-loader`
 
 ## less
 > 安装 less 和 less-loader，并将该 loader 添加到 webpack 的配置中去
-`npm install less less-loader --save-dev`
+ >> `npm install less less-loader --save-dev`
 
 ## sass
 > 安装 sass-loader和sass，sass-loader 需要预先安装 Dart Sass 或 Node Sass。这可以控制所有依赖的版本， 并自由的选择使用的 Sass 实现。
-`npm install sass-loader sass webpack --save-dev`
+ >> `npm install sass-loader sass webpack --save-dev`
 
 ## stylus
 > 安装 stylus 和 stylus-loader，并将该 loader 添加到 webpack 配置中
-`npm install stylus stylus-loader --save-dev`
+ >> `npm install stylus stylus-loader --save-dev`
 
 ## 示例
 ```js
