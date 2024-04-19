@@ -12,6 +12,10 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    localStorage.setItem('vitepress-theme-appearance', 'dark')
+    try {
+      localStorage.setItem('vitepress-theme-appearance', 'dark')
+    } catch (e) {
+      // console.log(e)
+    }
   }
 }

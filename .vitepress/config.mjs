@@ -6,6 +6,18 @@ export default defineConfig({
   base: "/blog/",
   title: "Gaara的前端学习笔记",
   description: "Gaara的前端学习笔记",
+  ignoreDeadLinks: [
+    // ignore exact url "/playground"
+    '/playground',
+    // ignore all localhost links
+    /^https?:\/\/localhost/,
+    // ignore all links include "/repl/""
+    /\/repl\//,
+    // custom function, ignore all links include "ignore"
+    (url) => {
+      return url.toLowerCase().includes('ignore')
+    }
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/img/naruto.png',
@@ -48,7 +60,9 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Jahseh-bot' }
     ],
-    aside: true
+    aside: true,
+  
+  
   }
 })
 
