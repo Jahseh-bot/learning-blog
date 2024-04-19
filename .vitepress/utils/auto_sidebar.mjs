@@ -25,7 +25,7 @@ const autoSidebar = function (p) {
         items,
         collapsed: true,
       }
-      console.log(item)
+      // console.log(item)
       acc.push(item)
     }
     else if (cur === 'index.md') { }
@@ -41,6 +41,7 @@ const autoSidebar = function (p) {
     }
     return acc
   }, [])
+  console.log(arr)
   return arr
 }
 

@@ -9,6 +9,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/img/naruto.png',
+   
     outlineTitle: '目录',
     outline: [2, 6],
     nav: [
@@ -25,7 +26,7 @@ export default defineConfig({
           { text: 'koa', link: '/nodejs/koa/' },
         ]
       },
-
+    
     ],
 
     sidebar: {
