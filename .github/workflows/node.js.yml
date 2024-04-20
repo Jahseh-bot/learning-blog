@@ -39,3 +39,18 @@ jobs:
       uses: actions/create-realease@master
       env: 
         GIHUB_TOKEN: ${{ secrets.TOKEN }}
+
+    #部署到服务器
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      with: 
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.NAME }}
+        passwrod: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: |
+          ls -al
+          cd /
+          wget https://
+          tar zxvf 
+          npm install
