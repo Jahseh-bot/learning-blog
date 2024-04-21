@@ -36,8 +36,8 @@ jobs:
       with: 
         name: build
         path: ./.vitepress/dist
-    - name: run ls
-      run: ls
+    - name: run ls -a
+      run: ls -a
     # 部署到服务器
     - name: Deploy 
       uses: appleboy/scp-action@v0.1.7
