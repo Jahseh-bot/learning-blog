@@ -45,7 +45,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }} 
         port: ${{ secrets.PORT }}
-        source: .vitepress/dist/*
+        source: .vitepress/dist/index.html
         target: /github_actions/
   
 
