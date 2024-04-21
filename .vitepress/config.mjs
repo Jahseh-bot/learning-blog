@@ -3,6 +3,7 @@ import autoSidebar from './utils/auto_sidebar.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  outDir: 'dist',
   base: "/blog/",
   title: "Gaara的前端学习笔记",
   description: "Gaara的前端学习笔记",
