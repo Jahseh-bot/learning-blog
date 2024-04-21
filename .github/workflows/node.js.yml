@@ -46,6 +46,6 @@ jobs:
         password: ${{ secrets.PASSWORD }} 
         port: ${{ secrets.PORT }}
         source: "./.vitepress/dist/"
-        target: "/usr/local/webApp/blog/"
+        target: "/github_actions/"
   
 
