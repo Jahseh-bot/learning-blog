@@ -28,6 +28,7 @@ export default defineConfig({
       { text: 'HTML', link: '/HTML/index.md' },
       { text: 'CSS', link: '/CSS/' },
       { text: 'Vue', link: '/Vue/' },
+      { text: 'React', link: '/React/' },
       { text: 'Webpack', link: '/Webpack/' },
       { text: 'Server', link: '/server/' },
       {
@@ -45,6 +46,7 @@ export default defineConfig({
       '/HTML/': autoSidebar('/HTML'),
       '/CSS/': autoSidebar('/CSS'),
       '/Vue/': autoSidebar('/Vue'),
+      '/React/': autoSidebar('/React'),
       '/nodejs': autoSidebar('/nodejs'),
       '/Webpack': autoSidebar('/Webpack'),
       '/server': autoSidebar('/server'),

@@ -11,6 +11,11 @@ function isDir(p) {
   return stat.isDirectory()
 }
 
+function isEmpty(p) {
+  const stat = fs.statSync(p)
+  return stat.size === 0
+}
+
 const autoSidebar = function (p) {
   const dirname = path.join(__dirname, '../..', p)
   const dir = fs.readdirSync(dirname)
@@ -37,7 +42,7 @@ const autoSidebar = function (p) {
         link,
         collapsed: true,
       }
-      MD_REG.test(cur) ? acc.push(item) : ''
+      MD_REG.test(cur) && !isEmpty(path.resolve(dirname, cur)) ? acc.push(item) : ''
     }
     return acc
   }, [])

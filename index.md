@@ -30,6 +30,9 @@ features:
       src: /img/Vue.png
     title: Vue 
   - icon: 
+      src: /img/React.png
+    title: React
+  - icon: 
       src: /img/nodejs.png
     title: Node
   - icon: 

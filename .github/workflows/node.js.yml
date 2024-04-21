@@ -33,41 +33,12 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
 
-    # 发布 Release
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@master
-      env: 
-        GIHUB_TOKEN: ${{ secrets.TOKEN }}
-      with: 
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
-
-    #上传构建结果到 Release
-    - name: Upload Release Asset
-      id: upload_release_asset
-      uses: actions/upload_release_asset@master
-      env: 
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      with: 
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./release.tgz
-        asset_name: release.tgz
-        asset_content_type: application/x-tgz
-  
-    #部署到服务器
-    - name: Deploy
-      uses: appleboy/ssh-action@master
-      with: 
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        passwrod: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: |
-          ls -al
-          cd /usr/local/webApp/blog
-          wget https://
-          tar zxvf 
-          npm install
+    # 部署到服务器
+    - name: 📂 Sync files 
+    uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    with:
+      server: ${{ secrets.HOST }}
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}
+      local-dir: ./.vitepress/dist
+      server-dir: /usr/local/webApp/blog
