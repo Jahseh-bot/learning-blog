@@ -39,6 +39,7 @@ jobs:
         server: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
         local-dir: ./.vitepress/dist/
         server-dir: /usr/local/webApp/blog/
         timeout : 60000
