@@ -38,8 +38,7 @@ jobs:
       with:
         username: ${{ secrets.USERNAME }}
         server: ${{ secrets.HOST }}
-        ssh_private_key: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
         local_path: './.vitepress/dist/*'
         remote_path: '/usr/local/webApp/blog/'
         sftpArgs: '-o ConnectTimeout=5'
