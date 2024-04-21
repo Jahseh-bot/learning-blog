@@ -40,4 +40,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         local-dir: ./.vitepress/dist/
-        server-dir: /usr/local/webApp/blog
+        server-dir: /usr/local/webApp/blog/
