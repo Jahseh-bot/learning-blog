@@ -46,7 +46,6 @@ const autoSidebar = function (p) {
     }
     return acc
   }, [])
-  console.log(arr)
   return arr
 }
 
