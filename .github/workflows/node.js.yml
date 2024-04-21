@@ -34,11 +34,10 @@ jobs:
 
     # 部署到服务器
     - name: Deploy 
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      uses: easingthemes/ssh-deploy@main
       with:
-        username: ${{ secrets.USERNAME }}
-        server: ${{ secrets.HOST }}
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        local_path: './.vitepress/dist/*'
-        remote_path: '/usr/local/webApp/blog/'
-        sftpArgs: '-o ConnectTimeout=5'
+        REMOTE_USER: ${{ secrets.USERNAME }}
+        REMOTE_HOST: ${{ secrets.HOST }}
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SOURCE: './.vitepress/dist/'
+        TARGET: '/usr/local/webApp/blog/'
