@@ -34,12 +34,12 @@ jobs:
 
     # 部署到服务器
     - name: Deploy 
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        server: ${{ secrets.HOST }}
+        ssh_private_key: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        local-dir: ./.vitepress/dist/
-        server-dir: /usr/local/webApp/blog/
-        timeout : 60000
+        local_path: './.vitepress/dist/*'
+        remote_path: '/usr/local/webApp/blog/'
+        sftpArgs: '-o ConnectTimeout=5'
