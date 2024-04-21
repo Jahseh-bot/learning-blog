@@ -35,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with: 
         name: build
-        path: ./vitepress/dist
+        path: ./.vitepress/dist
     # 部署到服务器
     - name: Deploy 
       uses: appleboy/scp-action@v0.1.7
