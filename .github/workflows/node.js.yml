@@ -46,7 +46,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }} 
         port: ${{ secrets.PORT }}
-        source: dist/index.html
-        target: /github_actions/
+        source: dist/
+        target: /usr/local/webApp/blog
   
 
