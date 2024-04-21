@@ -36,6 +36,7 @@ jobs:
       with: 
         name: build
         path: ./.vitepress/dist
+
     # 部署到服务器
     - name: Deploy 
       uses: appleboy/scp-action@v0.1.7
@@ -44,7 +45,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }} 
         port: ${{ secrets.PORT }}
-        source: ".vitepress/dist/*"
+        source: "./.vitepress/dist/"
         target: "/usr/local/webApp/blog/"
   
 
