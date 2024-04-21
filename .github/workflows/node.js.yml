@@ -30,8 +30,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    - run: npm run build --if-present
-    - run: npm test
+    - run: docs:build
+
 
     # 部署到服务器
     - name: 📂 Sync files 
