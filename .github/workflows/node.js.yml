@@ -41,3 +41,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         local-dir: ./.vitepress/dist/
         server-dir: /usr/local/webApp/blog/
+        timeout_minutes : 1
+        max_attempts : 3
