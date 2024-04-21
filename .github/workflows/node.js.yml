@@ -31,7 +31,11 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run docs:build
-
+    - name: Upload  artifact
+      uses: actions/upload_artifact@v2
+      with: 
+        name: build
+        path: ./vitepress/dist
     # 部署到服务器
     - name: Deploy 
       uses: appleboy/scp-action@v0.1.7
