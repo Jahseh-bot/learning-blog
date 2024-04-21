@@ -30,8 +30,8 @@ export default defineConfig({
       { text: 'CSS', link: '/CSS/' },
       { text: 'Vue', link: '/Vue/' },
       // { text: 'React', link: '/React/' },
-      // { text: 'Webpack', link: '/Webpack/' },
-      // { text: 'Server', link: '/server/' },
+      { text: 'Webpack', link: '/Webpack/' },
+      { text: 'Server', link: '/server/' },
       {
         text: 'Nodejs', items: [
           { text: 'node', link: '/nodejs/node/' },
@@ -49,8 +49,8 @@ export default defineConfig({
       '/Vue/': autoSidebar('/Vue'),
       // '/React/': autoSidebar('/React'),
       '/nodejs': autoSidebar('/nodejs'),
-      // '/Webpack': autoSidebar('/Webpack'),
-      // '/server': autoSidebar('/server'),
+      '/Webpack': autoSidebar('/Webpack'),
+      '/server': autoSidebar('/server'),
       '/nodejs/nestjs/': autoSidebar('/nodejs/nestjs'),
       '/nodejs/express/': autoSidebar('/nodejs/express'),
       '/nodejs/koa/': autoSidebar('/nodejs/koa'),
