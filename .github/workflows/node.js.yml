@@ -39,5 +39,5 @@ jobs:
         server: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        local-dir: ./.vitepress/dist
+        local-dir: ./.vitepress/dist/
         server-dir: /usr/local/webApp/blog
