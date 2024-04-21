@@ -27,17 +27,17 @@ export default defineConfig({
     outline: [2, 6],
     nav: [
       // { text: 'HTML', link: '/HTML/index.md' },
-      { text: 'CSS', link: '/CSS/' },
-      { text: 'Vue', link: '/Vue/' },
+      // { text: 'CSS', link: '/CSS/' },
+      // { text: 'Vue', link: '/Vue/' },
       // { text: 'React', link: '/React/' },
       { text: 'Webpack', link: '/Webpack/' },
-      { text: 'Server', link: '/server/' },
+      // { text: 'Server', link: '/server/' },
       {
         text: 'Nodejs', items: [
-          { text: 'node', link: '/nodejs/node/' },
+          // { text: 'node', link: '/nodejs/node/' },
           { text: 'nestjs', link: '/nodejs/nestjs/' },
-          { text: 'express', link: '/nodejs/express/' },
-          { text: 'koa', link: '/nodejs/koa/' },
+          // { text: 'express', link: '/nodejs/express/' },
+          // { text: 'koa', link: '/nodejs/koa/' },
         ]
       },
     
