@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -33,7 +33,7 @@ jobs:
     - run: npm run docs:build
 
     # 部署到服务器
-    - name: 📂 Sync files 
+    - name: Deploy 
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.HOST }}
