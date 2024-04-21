@@ -34,10 +34,10 @@ jobs:
 
     # 部署到服务器
     - name: Deploy 
-      uses: easingthemes/ssh-deploy@main
+      uses: appleboy/ssh-action@v1.0.3
       with:
-        REMOTE_USER: ${{ secrets.USERNAME }}
-        REMOTE_HOST: ${{ secrets.HOST }}
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: './.vitepress/dist/'
-        TARGET: '/usr/local/webApp/blog/'
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami
