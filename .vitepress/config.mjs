@@ -26,7 +26,7 @@ export default defineConfig({
     outlineTitle: '目录',
     outline: [2, 6],
     nav: [
-      // { text: 'HTML', link: '/HTML/index.md' },
+      { text: 'HTML', link: '/HTML/index.md' },
       // { text: 'CSS', link: '/CSS/' },
       // { text: 'Vue', link: '/Vue/' },
       // { text: 'React', link: '/React/' },
